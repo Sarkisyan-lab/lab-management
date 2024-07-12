@@ -1,0 +1,5 @@
+validators==0.18.2
+dnacauldron==2.0.6
+pydna==4.0.0a0
+pyairtable==1.4.0
+benchlingapi==2.1.12

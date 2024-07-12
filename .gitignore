@@ -1,0 +1,14 @@
+*.json
+chatID_*
+/backups/
+/geckodriver.log
+**/.ipynb_checkpoints/
+__pycache__
+OLD
+**/*.log
+**/*.gb
+# Ignore all bot.env files
+**/bot.env
+**/core.env
+!**/bot.env.template
+!**/core.env.example

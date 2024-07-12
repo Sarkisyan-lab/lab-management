@@ -1,0 +1,7 @@
+benchlingapi==2.1.12
+natsort==8.4.0
+validators==0.18.2
+biopython==1.78
+dna_features_viewer==3.0.3
+pyairtable==1.4.0
+python-dotenv==0.21.0

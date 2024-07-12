@@ -1,0 +1,5 @@
+pyairtable==1.4.0
+validators==0.18.2
+benchlingapi==2.1.12
+biopython==1.78
+dnacauldron==2.0.6

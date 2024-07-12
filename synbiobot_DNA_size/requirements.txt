@@ -1,0 +1,5 @@
+biopython==1.78
+pyairtable==1.4.0
+benchlingapi==2.1.12
+validators==0.18.2
+
