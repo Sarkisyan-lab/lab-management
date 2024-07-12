@@ -28,36 +28,38 @@ For some bots, additional requirements apply. You may have to create a [google s
 <br><br><br>
 ## 2. How this repository is organised
 
-The folder __synbiobot_CORE__ contains code shared by almost all bots and should always be downloaded.
+The folder synbiobot_CORE contains code shared by almost all bots and should always be downloaded.
 
-The other folders, named __synbiobot_[bot name]__ each contain all the code and elements necessary to run a bot. You can choose which bots to run.
+The other folders, named synbiobot_[bot name] each contain all the code and elements necessary to run a bot. You can choose which bots to run.
 
 <br><br><br>
 ## 3. Configuration
 
 ### Creating the database
-In order to run the bots on your database, you will need to create a database with the adequate schema.<br>
+For most bots, you need to create a database with the adequate schema.<br>
 The easiest way to do that is to use our template, available from Airtable universe [here](https://www.airtable.com/universe/expPcKlB7VCHE6wVK/lab-management).<br>
-You will also need a personal access token from Airtable which you can create [here](https://airtable.com/create/tokens) with read and write permissions on the records of the base and read permission on database schema.
+
+You also need a personal access token from Airtable which you can create [here](https://airtable.com/create/tokens).
+
+Give the token a name, set the scope ("data.records:read", "data.records:write", "schema.bases.read"), select the base.
+
+Click create and copy the token value for the env files.
 
 ### Populating the .env files
-Once this is done, you need to populate the environment files (*.env) in the synbiobot_CORE and synbiobot_[bot name] folders.
+You need to populate the environment files in the synbiobot_CORE and synbiobot_[bot name] folders.
 
-core.env contains environment variables shared between bots.<br>
-The bot.env files contains additional environment variables specific to each bot. 
-Refer to the template env files to learn how to configure your setup.
+Use the templates files provided, named "core.env.template" or "bot.env.template". Copy the template file, rename it "core.env" or "bot.env" accordingly.
 
-To help you get started, use the template files (with names ending with ".env.template"). Create a copy of the template file, rename it (the name should end with ".env") and populate the variables inside it.
+Open the env file and follow the instructions for configuring the bot.
 
 
 ## 4. Running, stopping and debugging a bot
 
-The helper script called tool_helper.sh can be used to start, stop and open a terminal inside a running Docker container. If you are familiar with Docker you can do it your own way.
+The helper script called tool_helper.sh can be used to start, stop and open a terminal inside a running Docker container.
 
 Simply open a terminal in the directory of the repo and run this command:
 
 ```./tool_helper.sh``` or ```bash tool_helper.sh```
-
 
 The script will first ask you which bot you wish to select.
 
@@ -70,22 +72,31 @@ Enter a number and press enter.
 The helper script will then perform the seleted action on the selected bot for you.
 
 <br><br><br>
-## 4. Contributing
-If you wish to contribute or test something on the code, you can use the tool scripts to assist you.
+## 5. Contributing
+
+Contributions are welcome !
+
+If you wish to contribute or debug a bot, you can use the tool scripts provided to assist you.
 
 ### tool_setup_dev_envs.sh
-This script automates the creation of anaconda environments and the installation of the dependencies required for developing each bot. Run it with the command:
+This script automates the creation of anaconda environments and the installation of the dependencies required for developing each bot.
+
+Run it with the command:
 
 ```./tool_setup_dev_envs.sh``` or ```bash tool_setup_dev_envs.sh```
 
 
 ### tool_run_jupyter.sh
-This script will ask you to select a bot. It will then activate the required conda environment, load the environment vars and start jupyter notebook for you. Run it with:
+This script will ask you to select a bot. It will then activate the required conda environment, load the environment vars and start jupyter notebook for you where you can modify the code of the bot.
+
+Run it with:
 
 ```./tool_run_jupyter.sh``` or ```bash tool_run_jupyter.sh```
 
 ### tool_refresh_scripts.py
-After you have modified the jupyter notebook file(s), use this script to export recursively all jupyter notebook files as python scripts. Run it with the command:
+After you have modified and saved the jupyter notebook file(s), use this script to export recursively all jupyter notebook files as python scripts. 
+
+Run it with the command:
 
 ```./tool_refresh_scripts.sh``` or ```bash tool_refresh_scripts.sh```
 
