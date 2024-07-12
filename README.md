@@ -1,21 +1,17 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Python 3](https://img.shields.io/badge/Language-Python_3-steelblue.svg)
+[![DOI](https://zenodo.org/badge/DOI/10.1101/2024.07.08.602487.svg)](https://doi.org/10.1101/2024.07.08.602487)
+
 # Lab-management
 
 
-This work is licensed under the terms:
+This work is licensed under the GPL v3 terms, which are designed to ensure that users have the freedom to run, study, share, and modify the software. Importantly, any derivative works must also be shared under the same license terms.
+Please check the LICENSE file for the full terms.
 
-GNU AFFERO GENERAL PUBLIC LICENSE
-Version 3, 19 November 2007
-
-This license is designed to ensure that users have the freedom to run, study, share, and modify the software. Importantly, __any derivative works must also be shared under the same license terms__.
-
-Please cite us :
-
+Please cite :<br>
 A platform for lab management, note-keeping and automation<br>
 Aubin Fleiss, Alexander S Mishin, Karen S Sarkisyan<br>
 bioRxiv 2024.07.08.602487; doi: https://doi.org/10.1101/2024.07.08.602487
-
-
-Please check the LICENSE file for the full terms.
 
 
 <br><br><br>
